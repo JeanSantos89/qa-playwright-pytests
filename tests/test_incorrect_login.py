@@ -4,8 +4,8 @@ import pytest
 def test_loginUser(page: Page):
     page.goto('http://automationexercise.com')
     page.wait_for_selector('a[href="/login"]').click() # Entre na aba login
-    adiciona_login = page.wait_for_selector('input[type="email"]').type("jean@50508080") # Adiciona login
-    adiciona_senha = page.wait_for_selector('input[type="password"]').type("jean@50508080") # Adiciona Senha
+    adiciona_login = page.wait_for_selector('input[type="email"]').type("xxxxx@teste.com") # Adiciona login
+    adiciona_senha = page.wait_for_selector('input[type="password"]').type("xxxxxxxxxx") # Adiciona Senha
     botao_login = page.wait_for_selector('button[type="submit"]').click() # Verifica login
 
     try:
