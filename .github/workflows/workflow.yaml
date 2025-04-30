@@ -1,0 +1,25 @@
+name: Continuous Integration
+
+on: [pull_request, push]
+
+jobs:
+  continuos-integration:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependências
+        run: |
+            python -m pip install --upgrade pip
+            pip install pytest
+            pip install -r requirements.txt
+            playwright install
+
+      - name: Executar testes
+        run: pytest --headed --html=report.html
