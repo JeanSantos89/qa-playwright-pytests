@@ -19,7 +19,7 @@ jobs:
             python -m pip install --upgrade pip
             pip install pytest
             pip install -r requirements.txt
-            playwright install
+            python -m playwright install
 
       - name: Executar testes
         run: pytest --headed --html=report.html
