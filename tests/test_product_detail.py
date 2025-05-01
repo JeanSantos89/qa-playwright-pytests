@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 import pytest
 
-def test_loginUser(page: Page):
+def test_ProductDetail(page: Page):
     page.goto('http://automationexercise.com')
     products_btn = page.wait_for_selector('a[href="/products"]').click() # Entre na aba produtos
     primeiro_produto = page.wait_for_selector('a[href="/product_details/1"]').click() # Entra no primeiro produto disponível

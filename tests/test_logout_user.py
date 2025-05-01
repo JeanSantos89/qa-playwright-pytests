@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 import pytest
 
-def test_loginUser(page: Page):
+def test_LogoutUser(page: Page):
     page.goto('http://automationexercise.com')
     login_btn = page.wait_for_selector('a[href="/login"]').click() # Entre na aba login
     adiciona_login = page.wait_for_selector('input[type="email"]').type("jean@50508080") # Adiciona login

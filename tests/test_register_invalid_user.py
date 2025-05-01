@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 import pytest
 
-def test_loginUser(page: Page):
+def test_RegisterInvalid(page: Page):
     page.goto('http://automationexercise.com')
     page.wait_for_selector('a[href="/login"]').click() # Entre na aba login
     cadastra_login = page.wait_for_selector('input[data-qa="signup-name"]').type("jean") # Adiciona nome 
